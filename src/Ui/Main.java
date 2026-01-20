@@ -10,27 +10,19 @@ import Model.PedidoExpress;
 public class Main {
     public static void main(String[] args) {
         //utilize la misma estructura para mostrarlo que en el ejemplo que dio en clases
-        Pedido comida = new PedidoComida(1, "pasaje 1");
-        Pedido encomienda = new PedidoEncomienda(2, "pasaje 2");
-        Pedido express = new PedidoExpress(3, "pasaje 3");
-
-        System.out.println("=== Prueba sin nombre (polimorfismo) ===");
-        comida.asignarRepartidor();
-        System.out.println();
-        encomienda.asignarRepartidor();
-        System.out.println();
-        express.asignarRepartidor();
-        System.out.println();
-
-        System.out.println("=== Prueba con nombre (sobrecarga) ===");
-        PedidoComida rcomida = new PedidoComida(4, "pasaje 4");
-        PedidoEncomienda rencomienda = new PedidoEncomienda(5, "pasaje 5");
-        PedidoExpress rexpress = new PedidoExpress(6, "pasaje 6");
-
-        rcomida.asignarRepartidor("Juan");
-        System.out.println();
-        rencomienda.asignarRepartidor("Julio");
-        System.out.println();
-        rexpress.asignarRepartidor("Jaime");
+        Pedido comida = new PedidoComida(1, "pasaje 1", 1.0);
+        Pedido encomienda = new PedidoEncomienda(2, "pasaje 2", 3.0);
+        Pedido express = new PedidoExpress(3, "pasaje 3", 6.0);
+        //no tienen el calcularTiempoEntrega() porque el resumen lo muestra
+        System.out.println("---------");
+        System.out.println("[Pedido comida]");
+        comida.mostrarResumen();
+        System.out.println("---------");
+        System.out.println("[Pedido encomienda]");
+        encomienda.mostrarResumen();
+        System.out.println("---------");
+        System.out.println("[Pedido express]");
+        express.mostrarResumen();
+        System.out.println("---------");
     }
 }

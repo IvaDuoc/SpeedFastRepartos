@@ -1,6 +1,6 @@
 package Model;
 
-public class Pedido {
+public abstract class Pedido {
     private int idPedido;
     private String direccionEntrega;
     private String tipoPedido;
@@ -9,7 +9,7 @@ public class Pedido {
     public Pedido(int idPedido, String direccionEntrega, String tipoPedido, double distanciaKm) {
         this.idPedido = idPedido;
         this.direccionEntrega = direccionEntrega;
-        this.tipoPedido = tipoPedido;
+        this.tipoPedido = tipoPedido; //se lo deje porque creo que no da mucho problema que este presente
         this.distanciaKm = distanciaKm;
     }
     public int getIdPedido() {
@@ -42,7 +42,7 @@ public class Pedido {
     public void mostrarResumen(){
         System.out.println("ID: " + idPedido);
         System.out.println("Direccion: " + direccionEntrega);
-        System.out.println("Tipo: " + tipoPedido);
+        System.out.println("Tipo: " + tipoPedido); //ya que no lo quite lo deje
         System.out.println("Distancia: " + distanciaKm + " km");
         System.out.println("Tiempo: " + calcularTiempoEntrega() + " minutos");
     }

@@ -50,7 +50,7 @@ public class Main {
         pedidoExpress.cancelar();
 
         // Agregar comida al historial como entregado
-        controlador.agregarAlHistorial(pedidoComida);
+        controlador.agregarAlHistorial(pedidoComida); //tecnicamente aun no esta realizada pero sirve para mostrar que aun no tiene repartidor
 
         // Ver historial, puse que en cada pedido aparte de mostrar
         System.out.println("------------");
